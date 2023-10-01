@@ -1,1 +1,8 @@
 Chickenfoot: smol tool to trim, merge and extract audios from videos I record.
+
+how to use: pip install moviepy or pip install -r requirements.txt
+
+optional:
+python -m venv venv
+venv\Scripts\activate
+
