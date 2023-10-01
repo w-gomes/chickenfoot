@@ -15,6 +15,7 @@ def write(clip, out_f: str, out_t):
         case Output.AUDIO:
             clip.write_audiofile(out_f)
 
+
 def to_clip(filename: str):
     return VideoFileClip(filename)
 
