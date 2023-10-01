@@ -2,9 +2,11 @@ from sys import argv
 from enum import Enum, auto
 from moviepy.editor import VideoFileClip, concatenate_videoclips
 
+
 class Output(Enum):
     VIDEO = auto()
     AUDIO = auto()
+
 
 def write(clip, out_f: str, out_t):
     match out_t:
