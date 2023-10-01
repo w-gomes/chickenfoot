@@ -1,0 +1,36 @@
+# Byte-compiled / compiled files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Python environment
+venv/
+env/
+env.bak/
+*.egg-info/
+dist/
+build/
+__pycache__/
+.pytest_cache/
+.tox/
+
+# IDE-specific files (e.g., PyCharm, Visual Studio Code)
+.idea/
+.vscode/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Environment-specific files
+*.env
+.env.*
+
+# Editor autosave files
+*~
+
+# Mac OS system files
+.DS_Store
+
+# Windows system files
+Thumbs.db
