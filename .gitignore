@@ -16,7 +16,7 @@ __pycache__/
 .tox/
 
 # Spec file
-.spec
+*.spec
 
 # IDE-specific files (e.g., PyCharm, Visual Studio Code)
 .idea/
