@@ -1,3 +1,4 @@
+from contextlib import contextmanager
 from sys import argv
 from enum import Enum, auto
 from moviepy.editor import VideoFileClip, concatenate_videoclips
@@ -8,12 +9,16 @@ class Output(Enum):
     AUDIO = auto()
 
 
+@contextmanager
 def write(clip, out_f: str, out_t):
-    match out_t:
-        case Output.VIDEO:
-            clip.write_videofile(out_f, codec="libx264")
-        case Output.AUDIO:
-            clip.write_audiofile(out_f)
+    try:
+        match out_t:
+            case Output.VIDEO:
+                clip.write_videofile(out_f, codec="libx264")
+            case Output.AUDIO:
+                clip.write_audiofile(out_f)
+    finally:
+        clip.close()
 
 
 def to_clip(filename: str):
